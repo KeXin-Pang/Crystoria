@@ -1,0 +1,14 @@
+{
+  "name": "crystoria-publication-renderer",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "dependencies": {
+    "matterviz": "0.4.1",
+    "svelte": "5.57.0"
+  },
+  "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "7.3.0",
+    "vite": "8.2.2"
+  }
+}
