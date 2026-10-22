@@ -1,0 +1,12 @@
+{
+  "packages": {
+    "ase": "3.26.0",
+    "numpy": "1.26.4",
+    "phonopy": "4.3.0",
+    "python": "3.12.12",
+    "spglib": "2.7.0",
+    "torch": "2.9.1+cu128"
+  },
+  "scope": "Actual EquFlash compute-worker runtime recorded with the fixed-endpoint protocol, not the launcher/data-tools environment.",
+  "source_manifest_sha256": "7a9bae41f193c7e7b7a0099f55fa980e52fe0322c2e55df8f4fb0e3f2d2f742a"
+}

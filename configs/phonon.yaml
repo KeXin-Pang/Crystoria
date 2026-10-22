@@ -1,0 +1,23 @@
+supercell_matrix:
+- - 2
+  - 0
+  - 0
+- - 0
+  - 2
+  - 0
+- - 0
+  - 0
+  - 2
+primitive_matrix: null
+phonopy_symprec: 1.0e-05
+displacement_angstrom: 0.01
+phonon_max_atoms_per_batch: 256
+mesh:
+- 12
+- 12
+- 12
+relax_fmax_ev_angstrom: 0.03
+relax_steps: 200
+thresholds:
+  stable_min_frequency_thz: -0.1
+  unstable_min_frequency_thz: -0.3

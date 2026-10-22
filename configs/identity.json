@@ -1,0 +1,14 @@
+{
+  "cosine_window": 0.001,
+  "log_length_window": 0.001,
+  "log_volume_window": 0.003,
+  "matcher": {
+    "angle_tol": 0.01,
+    "attempt_supercell": false,
+    "ltol": 0.0001,
+    "primitive_cell": false,
+    "scale": false,
+    "stol": 0.0001
+  },
+  "normalized_distance_window": 0.0025
+}

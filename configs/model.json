@@ -1,0 +1,13 @@
+{
+  "checkpoint_license": "CC-BY-4.0",
+  "checkpoint_license_evidence_doi": "10.6084/m9.figshare.32630910.v4",
+  "checkpoint_link_scope": "Official EquFlashV2 link; downloaded bytes must match the SHA256 before use.",
+  "declared_upstream_license": "CC-BY-NC-SA-4.0",
+  "license_scope": "GGNN source and compatibility patch: CC-BY-NC-SA-4.0. Official checkpoint file 65435007: CC-BY-4.0 under the Figshare v4 record.",
+  "name": "EquFlashV2-45M-OAM",
+  "official_checkpoint_link": "https://figshare.com/ndownloader/files/65435007",
+  "sha256": "068ce25767d5064fae41ffac352484ae59a8544ee671607a09dffdc6d62402a2",
+  "source_repository": "https://github.com/SamsungDS/GGNN",
+  "source_revision": "f57619d9f5d91bb703af573436ac71d66166d356",
+  "weights_included": false
+}

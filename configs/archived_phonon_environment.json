@@ -1,0 +1,18 @@
+{
+  "packages": {
+    "PyYAML": "6.0.3",
+    "ase": "3.29.0",
+    "matplotlib": "3.11.0",
+    "numpy": "2.4.6",
+    "pandas": "2.3.3",
+    "phonopy": "4.2.2",
+    "polars": "1.42.0",
+    "pyarrow": "24.0.0",
+    "pymatgen": "2026.5.4",
+    "scipy": "1.18.0",
+    "spglib": "2.7.0",
+    "torch": "2.11.0+cu130"
+  },
+  "scope": "Archived launcher environment only. Actual EquFlash worker versions are in archived_compute_environment.json. Neither is asserted to describe every earlier campaign worker.",
+  "source_environment_sha256": "2e4c68cabdc053263ea98bf69fa7c0b78f6958d3dd2193a66956ff90f918d292"
+}

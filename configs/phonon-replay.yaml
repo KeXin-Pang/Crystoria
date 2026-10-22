@@ -1,0 +1,25 @@
+displacement_angstrom: 0.01
+mesh:
+- 12
+- 12
+- 12
+mesh_backend: time_reversal_paired_regular_mesh_no_bz_relocation
+niggli_retry_lattice_round_decimals_sequence:
+- 7
+- 6
+phonon_max_atoms_per_batch: 256
+phonopy_symprec: 1.0e-05
+primitive_matrix: null
+supercell_matrix:
+- - 2
+  - 0
+  - 0
+- - 0
+  - 2
+  - 0
+- - 0
+  - 0
+  - 2
+thresholds:
+  stable_min_frequency_thz: -0.1
+  unstable_min_frequency_thz: -0.3

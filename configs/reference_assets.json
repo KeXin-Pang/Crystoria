@@ -1,0 +1,22 @@
+{
+  "elemental_references": {
+    "access": "Included in the accompanying dataset under 01-data/references; not bundled in the code-only archive.",
+    "filename": "2023-02-07-mp-elemental-reference-entries.json.gz",
+    "license_scope": "Matbench Discovery metadata is CC-BY-4.0; Materials Project data terms apply.",
+    "relative_to_data": "references/2023-02-07-mp-elemental-reference-entries.json.gz",
+    "required_for": "Endpoint formation energy and frozen-reference hull recalculation",
+    "sha256": "9fd6ef848a91c88840a0d1709b5856d0edb4af22095237e59db52f2acd6bbf79",
+    "source_url": "https://figshare.com/files/40387775",
+    "upstream": "https://github.com/janosh/matbench-discovery"
+  },
+  "phase_diagram": {
+    "access": "Included in the accompanying dataset under 01-data/references; not bundled in the code-only archive.",
+    "filename": "2023-02-07-ppd-mp.pkl.gz",
+    "license_scope": "Matbench Discovery metadata is CC-BY-4.0; Materials Project data terms apply.",
+    "relative_to_data": "references/2023-02-07-ppd-mp.pkl.gz",
+    "required_for": "Endpoint formation energy and frozen-reference hull recalculation",
+    "sha256": "f7fc992230e88dcf26bab2e85fa1ed4fdf6b047c06479bfd8b7a1e003f242d1e",
+    "source_url": "https://figshare.com/files/48241624",
+    "upstream": "https://github.com/janosh/matbench-discovery"
+  }
+}
