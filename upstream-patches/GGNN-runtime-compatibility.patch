@@ -1,0 +1,72 @@
+diff --git a/GGNN/model/EquFlashV2/nn/convolution.py b/GGNN/model/EquFlashV2/nn/convolution.py
+index 4bf4538..0a74dd5 100644
+--- a/GGNN/model/EquFlashV2/nn/convolution.py
++++ b/GGNN/model/EquFlashV2/nn/convolution.py
+@@ -17,9 +17,15 @@ from ._ghost_exchange_base import LAMMPSMLIAPGhostExchangeModule
+ def with_cueq_conv_fusion(conv_tp: torch.nn.Module) -> torch.nn.Module:
+     """Wraps a cuet.ConvTensorProduct to use conv fusion"""
+     conv_tp.original_forward = conv_tp.forward
+-    num_segment = conv_tp.m.buffer_num_segments[0]
+-    num_operands = conv_tp.m.operand_extent
+-    conv_tp.weight_numel = num_segment * num_operands
++    m = getattr(conv_tp, "m", None)
++    if (
++        m is not None
++        and hasattr(m, "buffer_num_segments")
++        and hasattr(m, "operand_extent")
++    ):
++        num_segment = m.buffer_num_segments[0]
++        num_operands = m.operand_extent
++        conv_tp.weight_numel = num_segment * num_operands
+ 
+     def forward(
+         self,
+diff --git a/GGNN/trainer/trainer.py b/GGNN/trainer/trainer.py
+index 95db61d..1baa4c0 100644
+--- a/GGNN/trainer/trainer.py
++++ b/GGNN/trainer/trainer.py
+@@ -1633,7 +1633,12 @@ class Trainer(ABC):
+         if isinstance(data_loader, torch_geometric.data.Batch):
+             ## temporary generate graph before prediction if input is batch.
+             ## this is needed because we generate graph in collater instaed of in model forward.
+-            from GGNN.common.utils import generate_graph, generate_graph_nvalchemi
++            from GGNN.common.utils import generate_graph
++
++            try:
++                from GGNN.common.utils import generate_graph_nvalchemi
++            except ImportError:
++                generate_graph_nvalchemi = None
+ 
+             if "pbc" not in data_loader:
+                 data_loader.pbc = torch.ones(
+@@ -1642,10 +1647,21 @@ class Trainer(ABC):
+                     device=self.device,
+                 )
+             data_loader = data_loader.to(self.device)
+-            edge_index, distance_vec, cell_offsets, _ = generate_graph_nvalchemi(
+-                data_loader,
+-                self.config["model"]["cutoff"],
+-            )
++            if generate_graph_nvalchemi is not None:
++                edge_index, distance_vec, cell_offsets, _ = generate_graph_nvalchemi(
++                    data_loader,
++                    self.config["model"]["cutoff"],
++                )
++            else:
++                edge_index, _edge_dist, distance_vec, cell_offsets, _offsets, _neigh = (
++                    generate_graph(
++                        data_loader,
++                        cutoff=self.config["model"]["cutoff"],
++                        max_neighbors=self.config["model"].get("max_neighbors"),
++                        use_pbc=self.config["model"].get("use_pbc", True),
++                        otf_graph=self.config["model"].get("otf_graph", True),
++                    )
++                )
+             data_loader.edge_index = edge_index
+             data_loader.cell_offsets = cell_offsets
+             data_loader.pbc_shift = data_loader.cell_offsets
+@@ -1751,4 +1767,3 @@ class Trainer(ABC):
+             self.ema.restore()
+ 
+         return predictions
+-

@@ -1,0 +1,14 @@
+{
+  "base_revision": "f57619d9f5d91bb703af573436ac71d66166d356",
+  "historical_scope": "Captured at packaging. Do not assume this proves every earlier production worker used identical local source modifications.",
+  "independent_physics_reproduction": "12 representative recalculations passed with this patch and pinned worker runtime",
+  "independent_reproduction_evidence": "03-evidence/validation/public-method-recalculation",
+  "modified_files": {
+    "GGNN/model/EquFlashV2/nn/convolution.py": "de9fa7963422c7f9568decf43f50ccf63b98777aa628431dc48ff2d2eaf35bc0",
+    "GGNN/trainer/trainer.py": "f339ed97c8c2b7fb4cea5c2619e4246796898c602ee1c829a91a6ded6f0a1de1"
+  },
+  "patch_sha256": "8ef3ca518f78b593ba4b78071f76e0237047d86f7727c226eb26e663d3b5bc62",
+  "repository": "https://github.com/SamsungDS/GGNN",
+  "scope": "Current local inference compatibility changes only; no model weights or Crystoria generator training code.",
+  "upstream_license": "CC-BY-NC-SA-4.0"
+}

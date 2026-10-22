@@ -1,0 +1,3 @@
+# GGNN inference compatibility snapshot
+
+Check out the exact base revision in manifest.json, inspect the patch, then use `git apply --check /path/to/GGNN-runtime-compatibility.patch` and `git apply` in the upstream checkout. The patch preserves local optional graph-builder and convolution-interface compatibility changes. Its function-file hashes identify the captured source. The upstream CC-BY-NC-SA-4.0 notice remains applicable. This is a packaging-time source snapshot, not an independent proof that graph-builder alternatives or all historical production environments yield identical frequencies. Twelve representative clean-source recalculations passed; see ../REPRODUCTION.md. A fresh dependency installation was not tested.
