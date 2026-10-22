@@ -1,0 +1,12 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+.venv/
+.env
+.env.*
+*.log
+joined-labels.parquet
+summaries/
+symmetry-summary/
+recalculated/
+node_modules/

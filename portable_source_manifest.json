@@ -1,0 +1,146 @@
+{
+  "entrypoints": [
+    {
+      "file": "assemble_dataset.py",
+      "sha256": "ecf6ed532dd17929c228e05b8fec3063661023e171d9a1ed52fdd05df3986390"
+    },
+    {
+      "file": "benchmark_metrics.py",
+      "sha256": "0c4c4ffc8a33239b9002e191d6580cb871e604da1af98c24a53e2bbc04f34419"
+    },
+    {
+      "file": "crystoria.py",
+      "sha256": "1d8d090f94ff9e305b15cee778f1c08181dda7bc13112da80afef0228e6f5ae3"
+    },
+    {
+      "file": "deduplicate.py",
+      "sha256": "c53dc21abddb76c1b562f19ca7d455ea69696585a25b56ea19c99b158cd4e505"
+    },
+    {
+      "file": "independent_recalculation_worker.py",
+      "sha256": "8d707e7dc4e4d507f6545e986e16982434ff66057e42853d8587f05272c8380f"
+    },
+    {
+      "file": "production_core.py",
+      "sha256": "29b364d3aedfa940cba49b498022fb4efabb44275c3ae08c49d04d16ce468ac8"
+    },
+    {
+      "file": "reproduce_figures.py",
+      "sha256": "cbe44d5ba0eb95cc2313762fe8b8240667d1f7a1f5c74feee11f83c25179802b"
+    },
+    {
+      "file": "reproduce_symmetry.py",
+      "sha256": "27fef09ca52b7877af80232f2ef7e286d0d20eb94484b439a6fa86ba8e6063c4"
+    }
+  ],
+  "new_entrypoint_scope": "reproduce_symmetry.py aggregates released Fig. S4 assignments; original calculation entrypoints are unchanged.",
+  "production_core": {
+    "extraction": "Verbatim selected function/class bodies; standalone imports assembled for this candidate.",
+    "git_revision": "bd981022b732c74ebd6cdd6361ca884256387ef9",
+    "independent_reproduction_evidence": "03-evidence/validation/public-method-recalculation",
+    "physics_recalculation_in_clean_environment": "representative_clean-source_recalculation_passed; not a fresh dependency installation",
+    "sources": [
+      {
+        "definitions": [
+          "PhononThresholds",
+          "classify_phonon_stability",
+          "_phonopy_atoms",
+          "_relax",
+          "_spacegroup_number",
+          "_build_phonopy"
+        ],
+        "source_filename": "phonon_screen.py",
+        "source_sha256": "aed282841e5015ef6ed635a52b3cfc6f2f321910498ac0fc22e947ed97a34675"
+      },
+      {
+        "definitions": [
+          "_install_torch_scatter_fallback",
+          "_calculator_factory",
+          "_equflash_batch_predictions"
+        ],
+        "source_filename": "potential_benchmark.py",
+        "source_sha256": "46b079ae6b871413a9dd3f5464f95059a0cb527836bd66eb43f11bae05065790"
+      },
+      {
+        "definitions": [
+          "InfrastructureError",
+          "_is_infrastructure_error",
+          "_phonon_from_relaxed"
+        ],
+        "source_filename": "equflash_phonon_cache.py",
+        "source_sha256": "8aec55ffdd7e52c9358cdf36b3e7a7770dd88ed3910a95bfb6a92d0b614494e7"
+      },
+      {
+        "definitions": [
+          "ProperStructureMatcher",
+          "structure_from_canonical_json",
+          "invert_fractional_coordinates",
+          "inverted_structure"
+        ],
+        "source_filename": "crystoria_enantiomer_view.py",
+        "source_sha256": "db0b70dedfbc18a5d282090bd94522de1455bcdb8026d7df32eb3b49cc443fd9"
+      },
+      {
+        "definitions": [
+          "_build_repaired_phonopy",
+          "_ir_mesh_qpoints",
+          "_spglib_ir_mesh_qpoints",
+          "_time_reversal_mesh_qpoints",
+          "_evaluate_endpoint"
+        ],
+        "source_filename": "crystoria_phonon_failure_repair.py",
+        "source_sha256": "58adc301a894b726e2efbc2d272b810fab8adc15ff9fa1a60f26ad3b43c4d02b"
+      },
+      {
+        "definitions": [
+          "require",
+          "geometry_features",
+          "continuous_candidates",
+          "component_roots",
+          "direct_representatives",
+          "grouped_split"
+        ],
+        "source_filename": "crystoria_geometric_release.py",
+        "source_sha256": "6dc170a9dda407dabb6cd82598e893136b947695891ba33ecf32d95c28cf67d1"
+      },
+      {
+        "definitions": [
+          "_canonical_payload",
+          "canonicalize_structure"
+        ],
+        "source_filename": "structure_stability_generator_corpus_v1.py",
+        "source_sha256": "766d28434e8000062d422cd96f751f1a125c44dc384ea08dca06d30b45ef0653"
+      },
+      {
+        "definitions": [
+          "load_elemental_reference_energies",
+          "elemental_reference_energy",
+          "formation_energy_per_atom",
+          "mp2020_correction",
+          "entry_from_formation_energy",
+          "fixed_mp_hull_distance"
+        ],
+        "source_filename": "mp2020_alignment.py",
+        "source_sha256": "f9cf210cc8f775f1fd3f5dbce24b0f3c76aff61a8c7161c140e4d79718f8f1be"
+      },
+      {
+        "definitions": [
+          "classification_metrics"
+        ],
+        "source_filename": "alexandria_dft_phonon_core_analysis.py",
+        "source_sha256": "4feb53369310ae32e2ba5963c1657db9767fe575fa3aa9ac799f998691317774"
+      },
+      {
+        "definitions": [
+          "_classification_counts",
+          "_bootstrap_balanced_accuracy",
+          "_mcnemar"
+        ],
+        "source_filename": "alexandria_dft_phonon_evaluate.py",
+        "source_sha256": "b6f2ae35eaedfcde5d4a65a88ad57a022a3374841bb40e1b84428a37d32b993a"
+      }
+    ]
+  },
+  "scope": "Standalone public entrypoints and selected unchanged production definitions.",
+  "version": "1.0.0"
+}

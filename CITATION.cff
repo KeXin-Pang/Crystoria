@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: Please cite the exact dataset and software versions used; retain upstream attribution and license notices.
+title: 'Crystoria: A Large-Scale Crystal Dataset Linking Thermodynamic and Dynamical
+  Stability for Materials AI'
+type: software
+version: 1.0.0
+authors:
+- family-names: Pang
+  given-names: Ke-Xin
+- family-names: Gao
+  given-names: Ze-Feng
+- family-names: Gao
+  given-names: Yan
+- family-names: Lu
+  given-names: Zhong-Yi
+license:
+- MIT
+- CC-BY-NC-SA-4.0
+date-released: 2026-10-23
+url: https://github.com/KeXin-Pang/Crystoria
+repository-code: https://github.com/KeXin-Pang/Crystoria
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.23572554
+    description: Dataset and exact accompanying software archive

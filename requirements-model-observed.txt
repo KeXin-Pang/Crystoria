@@ -1,0 +1,15 @@
+# Observed inference/import environment, not a fresh-install dependency lock.
+# PyTorch needs its platform-specific wheel index; GGNN source and patch are separate.
+PyYAML==6.0.3
+ase==3.26.0
+cuequivariance==0.6.0
+cuequivariance-torch==0.6.0
+e3nn==0.5.6
+fairchem-core==1.10.0
+numpy==1.26.4
+phonopy==4.3.0
+polars==1.42.0
+pymatgen==2025.10.7
+scipy==1.16.1
+spglib==2.7.0
+torch==2.9.1+cu128
